@@ -12,6 +12,7 @@ while (True):
     print("=================================")
     print("||  + Suma                     ||")
     print("||  - Resta                    ||")
+    print("||  * Multiplicacion           ||")
     print("||  / Division                 ||")
     print("||  r Raiz                     ||")
     print("||  = Resutado                 ||")
@@ -23,25 +24,32 @@ while (True):
             OP1 = int(input("Dame operador 1: "))
             BANDERA = False
             if(BANDERA == False):
-                OP2 = int(input("Dame operador 2: "))
-                RES = OP1 + OP2
+                OP2 = float(input("Dame operador 2: "))
+                RES = sumar_numeros(OP1,OP2)
     elif(opcion == '-'):
         if(BANDERA):
-            OP1 = int(input("Dame operador 1: "))
+            OP1 = float(input("Dame operador 1: "))
             BANDERA = False
             if(BANDERA == False):
-                OP2 = int(input("Dame operador 2: "))
-                RES = OP1 - OP2
+                OP2 = float(input("Dame operador 2: "))
+                RES = resta_numeros(OP1,OP2)
+    elif(opcion == '*'):
+        if(BANDERA):
+            OP1 = float(input("Dame operador 1: "))
+            BANDERA = False
+            if(BANDERA == False):
+                OP2 = float(input("Dame operador 2:"))
+                RES = multiplica_numeros(OP1,OP2)
     elif(opcion == '/'):
         if(BANDERA):
-            OP1 = int(input("Dame operador 1: "))
+            OP1 = float(input("Dame operador 1: "))
             BANDERA = False
             if(BANDERA == False):
-                OP2 = int(input("Dame operador 2: "))
-                RES = OP1/OP2
+                OP2 = float(input("Dame operador 2: "))
+                RES = divide_numeros(OP1,OP2)
     elif(opcion == 'r'):
         if (BANDERA):
-            OP1 = int(input("Dame operador: "))
+            OP1 = float(input("Dame operador: "))
             BANDERA = False
             if(BANDERA == False):
                 RES = math.sqrt(OP1)
@@ -52,4 +60,19 @@ while (True):
             print("El resultado es: " + str(RES))
             BANDERA = True
             RES = 0.0
-        pass        
+    elif(opcion == 's'):
+        break
+    else:
+        print("Operacion no valida") 
+
+def sumar_numeros(a,b):
+    return a + b
+
+def resta_numeros(a,b):
+    return a - b
+
+def divide_numeros(a,b):
+    return a / b
+
+def multiplica_numeros(a,b):
+    return a * b
