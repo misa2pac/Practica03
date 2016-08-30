@@ -6,6 +6,18 @@ import math
 BANDERA = True
 RES = 0.0
 
+def sumar_numeros(a,b):
+    return a + b
+
+def resta_numeros(a,b):
+    return a - b
+
+def divide_numeros(a,b):
+    return a / b
+
+def multiplica_numeros(a,b):
+    return a * b
+
 while (True):
     print("=================================")
     print("===========Calculadora===========")
@@ -21,7 +33,7 @@ while (True):
     opcion = input("Escribe una opcion: ")
     if(opcion == '+'):
         if(BANDERA):
-            OP1 = int(input("Dame operador 1: "))
+            OP1 = float(input("Dame operador 1: "))
             BANDERA = False
             if(BANDERA == False):
                 OP2 = float(input("Dame operador 2: "))
@@ -38,7 +50,7 @@ while (True):
             OP1 = float(input("Dame operador 1: "))
             BANDERA = False
             if(BANDERA == False):
-                OP2 = float(input("Dame operador 2:"))
+                OP2 = float(input("Dame operador 2: "))
                 RES = multiplica_numeros(OP1,OP2)
     elif(opcion == '/'):
         if(BANDERA):
@@ -64,15 +76,3 @@ while (True):
         break
     else:
         print("Operacion no valida") 
-
-def sumar_numeros(a,b):
-    return a + b
-
-def resta_numeros(a,b):
-    return a - b
-
-def divide_numeros(a,b):
-    return a / b
-
-def multiplica_numeros(a,b):
-    return a * b
