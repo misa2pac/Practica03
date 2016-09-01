@@ -27,6 +27,7 @@ while (True):
     print("||  * Multiplicacion           ||")
     print("||  / Division                 ||")
     print("||  r Raiz                     ||")
+    print("||  c Cuadrado                 ||")
     print("||  = Resutado                 ||")
     print("||  s Salir                    ||")
     print("=================================")
@@ -65,6 +66,12 @@ while (True):
             BANDERA = False
             if(BANDERA == False):
                 RES = math.sqrt(OP1)
+    elif(opcion == 'c'):
+        if(BANDERA):
+            OP1 = float(input("Dame operador: "))
+            BANDERA = False
+            if(BANDERA == False):
+                RES = OP1**2
     elif(opcion == '='):
         if(BANDERA):
             print("Nada que mostrar!")
@@ -75,4 +82,5 @@ while (True):
     elif(opcion == 's'):
         break
     else:
-        print("Operacion no valida") 
+        print("Operacion no valida")
+pass 
